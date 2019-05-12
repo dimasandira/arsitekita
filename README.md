@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <p align="center">
     <a href="https://github.com/yiisoft" target="_blank">
         <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
@@ -235,4 +234,3 @@ You can see code coverage output under the `tests/_output` directory.
 =======
 # arsitekita
 Framework Yii web project about Architect Service "ArsiteKita".
->>>>>>> e88d54dab45956bc328414548f31ec60e3d7dd4a
