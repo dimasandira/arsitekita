@@ -14,14 +14,14 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => 'sbypensarsitekita',
+            'cookieValidationKey' => 'cSyrIMx_qN1dZvH_rAB4LON9Vaxr5OWS',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
             'identityClass' => 'app\models\User',
-            'enableAutoLogin' => false,
+            'enableAutoLogin' => true,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -47,6 +47,29 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                '/' => 'site/index',
+                'login' => 'site/login',
+                'register' => 'site/signup',
+                'about' => 'site/about',
+                'projects' => 'site/projects',
+                'project' => 'site/project',
+                'developers' => 'site/developers',
+                'ranking' => 'site/ranking',
+                'notification' => 'site/notification',
+                'profile' => 'site/profile',
+                'progress' => 'site/progress',
+                'manage' => 'site/manage',
+                'form/file' => 'site/formfile',
+                'form/profile' => 'site/formprofile',
+                'form/progress' => 'site/formprogress',
+                'form/project' => 'site/formproject',
+                'form/testimoni' => 'site/formtestimoni',
+                'form/total' => 'site/formtotal',
+                'article/1/' => 'site/article1',
+                'article/2/' => 'site/article2',
+                'article/3/' => 'site/article3',
+                'article/4/' => 'site/article4',
+                'article/5/' => 'site/article5'
             ],
         ],
     ],
