@@ -86,6 +86,11 @@ class SiteController extends Controller
         ]);
     }
 
+    public function loginAction()
+    {
+        //login action here from a href in view;
+    }
+
     /**
      * Logout action.
      *
