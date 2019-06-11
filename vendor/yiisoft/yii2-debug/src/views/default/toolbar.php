@@ -12,14 +12,10 @@ use yii\helpers\Url;
 $firstPanel = reset($panels);
 $url = $firstPanel->getUrl();
 ?>
-<div id="yii-debug-toolbar" class="yii-debug-toolbar yii-debug-toolbar_position_<?= $position ?>" data-height="<?= $defaultHeight ?>">
+<!-- <div id="yii-debug-toolbar" class="yii-debug-toolbar yii-debug-toolbar_position_<?= $position ?>" data-height="<?= $defaultHeight ?>">
     <div class="yii-debug-toolbar__resize-handle"></div>
     <div class="yii-debug-toolbar__bar">
-        <div class="yii-debug-toolbar__block yii-debug-toolbar__title">
-            <a href="<?= Url::to(['index']) ?>">
-                <img width="30" height="30" alt="Yii" src="<?= \yii\debug\Module::getYiiLogo() ?>">
-            </a>
-        </div>
+
 
         <div class="yii-debug-toolbar__block yii-debug-toolbar__ajax" style="display: none">
             AJAX <span class="yii-debug-toolbar__label yii-debug-toolbar__ajax_counter">0</span>
@@ -39,17 +35,17 @@ $url = $firstPanel->getUrl();
             </div>
         </div>
 
-        <?php foreach ($panels as $panel): ?>
-            <?php if ($panel->hasError()): ?>
+        <?php //foreach ($panels as $panel): ?>
+            <?php // if ($panel->hasError()): ?>
                 <div class="yii-debug-toolbar__block">
-                    <a href="<?= $panel->getUrl() ?>"
-                       title="<?= Html::encode($panel->getError()->getMessage()); ?>"><?= Html::encode($panel->getName()) ?>
+                    <a href="<?php //$panel->getUrl() ?>"
+                       title="<?php //Html::encode($panel->getError()->getMessage()); ?>"><?= Html::encode($panel->getName()) ?>
                         <span class="yii-debug-toolbar__label yii-debug-toolbar__label_error">error</span></a>
                 </div>
-            <?php else: ?>
-                <?= $panel->getSummary() ?>
-            <?php endif; ?>
-        <?php endforeach; ?>
+            <?php //else: ?>
+                <?php //$panel->getSummary() ?>
+            <?php //endif; ?>
+        <?php //endforeach; ?>
 
         <div class="yii-debug-toolbar__block_last">
 
@@ -66,4 +62,4 @@ $url = $firstPanel->getUrl();
     <div class="yii-debug-toolbar__view">
         <iframe src="about:blank" frameborder="0" title="Yii2 debug bar"></iframe>
     </div>
-</div>
+</div> -->
