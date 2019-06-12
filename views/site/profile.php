@@ -151,48 +151,5 @@ $this->params['breadcrumbs'][] = $this->title;
 			</div>
 		</div>
 	</div>
-	<!-- Course -->
-	<div class="course">
-		<div class="container">
-			<div class="row">
-				<!-- Course -->
-				<div class="col-lg-12">
-					<div class="course_container">
-						<div class="course_tabs_container">
-							<div class="tabs d-flex flex-row align-items-center justify-content-start">
-								<div class="tab active">reviews</div>
-							</div>
-							<div class="tab_panels">
-								<!-- Reviews -->
-								<div class="tab_panel active">
-									<div class="tab_panel_title">Course Review</div>
-
-									<!-- Rating -->
-									<div class="review_rating_container">
-										<div class="review_rating">
-											<div class="review_rating_num">4.5</div>
-											<div class="review_rating_stars">
-												<div class="rating_r rating_r_4"><i></i><i></i><i></i><i></i><i></i></div>
-											</div>
-											<div class="review_rating_text">(28 Ratings)</div>
-										</div>
-										<div class="review_rating_bars">
-											<ul>
-												<li><span>5 Star</span><div class="review_rating_bar"><div style="width:90%;"></div></div></li>
-												<li><span>4 Star</span><div class="review_rating_bar"><div style="width:75%;"></div></div></li>
-												<li><span>3 Star</span><div class="review_rating_bar"><div style="width:32%;"></div></div></li>
-												<li><span>2 Star</span><div class="review_rating_bar"><div style="width:10%;"></div></div></li>
-												<li><span>1 Star</span><div class="review_rating_bar"><div style="width:3%;"></div></div></li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
 </div>

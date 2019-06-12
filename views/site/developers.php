@@ -28,171 +28,22 @@ $this->params['breadcrumbs'][] = $this->title;
                             </div>
                             <div class="courses_container">
                                 <div class="row courses_row">
-
+                                    <?php foreach ($developers as $developer) {
+                                        ?>
                                     <!-- Course -->
                                     <div class="col-lg-4 course_col">
                                         <div class="course">
-                                            <div class="course_image"><img src="<?php echo Url::to('@web/images/person_1.jpg'); ?>" alt=""></div>
+                                            <div class="course_image"><img src="<?php $linkto = '@web/data/' . $developer['FOTO']; echo Url::to($linkto); ?>" alt=""></div>
                                             <div class="course_body">
-                                                <h3 class="course_title"><a href="course.html">Software Training</a></h3>
-                                                <div class="course_teacher">Mr. John Taylor</div>
-                                                <div class="course_text">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor</p>
-                                                </div>
-                                            </div>
-                                            <div class="course_footer">
-                                                <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-                                                    <div class="course_info">
-                                                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                                                        <span>20 Student</span>
-                                                    </div>
-                                                    <div class="course_info">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <span>5 Ratings</span>
-                                                    </div>
-                                                    <div class="course_price ml-auto">$130</div>
-                                                </div>
+                                                <h3 class="course_title"><a href="/profile?id=<?php echo (int)$developer['ID'];?>"><?php echo $developer['NAMA']; ?></a></h3>
+                                                <div class="course_teacher"><?php echo $developer['KOTA']; ?></div>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <!-- Course -->
-                                    <div class="col-lg-4 course_col">
-                                        <div class="course">
-                                            <div class="course_image"><img src="<?php echo Url::to('@web/images/person_1.jpg'); ?>" alt=""></div>
-                                            <div class="course_body">
-                                                <h3 class="course_title"><a href="course.html">Developing Mobile Apps</a></h3>
-                                                <div class="course_teacher">Ms. Lucius</div>
-                                                <div class="course_text">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor</p>
-                                                </div>
-                                            </div>
-                                            <div class="course_footer">
-                                                <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-                                                    <div class="course_info">
-                                                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                                                        <span>20 Student</span>
-                                                    </div>
-                                                    <div class="course_info">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <span>5 Ratings</span>
-                                                    </div>
-                                                    <div class="course_price ml-auto">Free</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Course -->
-                                    <div class="col-lg-4 course_col">
-                                        <div class="course">
-                                            <div class="course_image"><img src="<?php echo Url::to('@web/images/person_1.jpg'); ?>" alt=""></div>
-                                            <div class="course_body">
-                                                <h3 class="course_title"><a href="course.html">Starting a Startup</a></h3>
-                                                <div class="course_teacher">Mr. Charles</div>
-                                                <div class="course_text">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor</p>
-                                                </div>
-                                            </div>
-                                            <div class="course_footer">
-                                                <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-                                                    <div class="course_info">
-                                                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                                                        <span>20 Student</span>
-                                                    </div>
-                                                    <div class="course_info">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <span>5 Ratings</span>
-                                                    </div>
-                                                    <div class="course_price ml-auto"><span>$320</span>$220</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Course -->
-                                    <div class="col-lg-4 course_col">
-                                        <div class="course">
-                                            <div class="course_image"><img src="<?php echo Url::to('@web/images/person_1.jpg'); ?>" alt=""></div>
-                                            <div class="course_body">
-                                                <h3 class="course_title"><a href="course.html">Learn Basic German Fast</a></h3>
-                                                <div class="course_teacher">Mr. John Taylor</div>
-                                                <div class="course_text">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor</p>
-                                                </div>
-                                            </div>
-                                            <div class="course_footer">
-                                                <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-                                                    <div class="course_info">
-                                                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                                                        <span>20 Student</span>
-                                                    </div>
-                                                    <div class="course_info">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <span>5 Ratings</span>
-                                                    </div>
-                                                    <div class="course_price ml-auto">$130</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Course -->
-                                    <div class="col-lg-4 course_col">
-                                        <div class="course">
-                                            <div class="course_image"><img src="<?php echo Url::to('@web/images/person_1.jpg'); ?>" alt=""></div>
-                                            <div class="course_body">
-                                                <h3 class="course_title"><a href="course.html">Business Groud Up</a></h3>
-                                                <div class="course_teacher">Ms. Lucius</div>
-                                                <div class="course_text">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor</p>
-                                                </div>
-                                            </div>
-                                            <div class="course_footer">
-                                                <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-                                                    <div class="course_info">
-                                                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                                                        <span>20 Student</span>
-                                                    </div>
-                                                    <div class="course_info">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <span>5 Ratings</span>
-                                                    </div>
-                                                    <div class="course_price ml-auto">Free</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Course -->
-                                    <div class="col-lg-4 course_col">
-                                        <div class="course">
-                                            <div class="course_image"><img src="<?php echo Url::to('@web/images/person_1.jpg'); ?>" alt=""></div>
-                                            <div class="course_body">
-                                                <h3 class="course_title"><a href="course.html">Java Technology</a></h3>
-                                                <div class="course_teacher">Mr. Charles</div>
-                                                <div class="course_text">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipi elitsed do eiusmod tempor</p>
-                                                </div>
-                                            </div>
-                                            <div class="course_footer">
-                                                <div class="course_footer_content d-flex flex-row align-items-center justify-content-start">
-                                                    <div class="course_info">
-                                                        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                                                        <span>20 Student</span>
-                                                    </div>
-                                                    <div class="course_info">
-                                                        <i class="fa fa-star" aria-hidden="true"></i>
-                                                        <span>5 Ratings</span>
-                                                    </div>
-                                                    <div class="course_price ml-auto"><span>$320</span>$220</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                    <?php
+                                    } ?>
                                 </div>
-                                <div class="row">
+                                <!-- <div class="row">
                                     <div class="col-md-12 text-center">
                                     <div class="site-pagination">
                                         <a href="#" class="active">1</a>
@@ -204,7 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <a href="#">10</a>
                                     </div>
                                     </div>  
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>

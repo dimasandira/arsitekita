@@ -14,7 +14,7 @@
 											<li><i class="fa fa-envelope-o" aria-hidden="true"></i><div>info.arsitekita@gmail.com</div></li>
 										</ul>
 										<div class="top_bar_login ml-auto">
-											<div class="login_button"><a href="signup/index.php">Daftar</a></div>
+											<div class="login_button"><a href="/register">Daftar</a></div>
 										</div>
 									</div>
 								</div>
@@ -33,12 +33,11 @@
 									</div>
 									<nav class="main_nav_contaner ml-auto">
 										<ul class="main_nav">
-											<li class="active"><a href="home.php">Beranda</a></li>
-											<li><a href="about.php">Tentang</a></li>
-											<li><a href="projects.php">Proyek</a></li>
-											<li><a href="developers.php">Pengembang</a></li>
-											<li><a href="ranking.php">Peringkat</a></li>
-											<li><a href="signin/index.php">Masuk</a></li>
+											<li class="active"><a href="/">Beranda</a></li>
+											<li><a href="/about">Tentang</a></li>
+											<li><a href="/projects">Proyek</a></li>
+											<li><a href="/developers">Pengembang</a></li>
+											<li><a href="/login">Masuk</a></li>
 										</ul>
 										<div class="hamburger menu_mm">
 											<i class="fa fa-bars menu_mm" aria-hidden="true"></i>
@@ -56,12 +55,11 @@
 				<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
 				<nav class="menu_nav">
 					<ul class="menu_mm">
-						<li class="menu_mm"><a href="home.php">Beranda</a></li>
-						<li class="menu_mm"><a href="about.php">Tentang</a></li>
-						<li class="menu_mm"><a href="projects.php">Proyek</a></li>
-						<li class="menu_mm"><a href="developers.php">Pengembang</a></li>
-						<li class="menu_mm"><a href="ranking.php">Peringkat</a></li>
-						<li class="menu_mm"><a href="signin.php">Masuk</a></li>
+						<li class="menu_mm"><a href="/">Beranda</a></li>
+						<li class="menu_mm"><a href="/about">Tentang</a></li>
+						<li class="menu_mm"><a href="/projects">Proyek</a></li>
+						<li class="menu_mm"><a href="/developers">Pengembang</a></li>
+						<li class="menu_mm"><a href="/login">Masuk</a></li>
 					</ul>
 				</nav>
 			</div>

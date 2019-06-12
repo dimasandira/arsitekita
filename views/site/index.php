@@ -112,83 +112,25 @@ $this->title = 'Home — ArsiteKita';
 					<div class="row mb-5">
 						<div class="col-12">
 							<div class="site-section-title">
-								<h2>New Properties for You</h2>
+								<h2>Proyek Terbaru</h2>
 							</div>
 						</div>
 					</div>
 					<div class="row mb-5">
+					<?php foreach ($projects as $project) {
+                        ?>
 						<div class="col-md-6 col-lg-4 mb-4">
-							<a href="property-details.html" class="prop-entry d-block">
-								<figure><img src="<?php echo Url::to('@web/images/img_1.jpg'); ?>" alt="Image" class="img-fluid"></figure>
+							<a href="/project?id=<?php echo (int) $project['ID']; ?>" class="prop-entry d-block">
+								<figure><img src="<?php $linkto = '@web/data/'. $project['FILE']; echo Url::to($linkto); ?>" alt="Image" class="img-fluid"></figure>
 								<div class="prop-text">
 									<div class="inner">
-										<span class="price rounded">$1,930,000</span>
-										<h3 class="title">853 S Lucerne Blvd</h3>
-										<p class="location">Los Angeles, CA 90005</p>
+										<span class="price rounded">Rp.<?php echo $project['HARGA']; ?>,-</span>
+										<h3 class="title"><?php echo $project['JUDUL']; ?></h3>
 									</div>
 								</div>
 							</a>
 						</div>
-						<div class="col-md-6 col-lg-4 mb-4">
-							<a href="property-details.html" class="prop-entry d-block">
-								<figure><img src="<?php echo Url::to('@web/images/img_1.jpg'); ?>" alt="Image" class="img-fluid"></figure>
-								<div class="prop-text">
-									<div class="inner">
-										<span class="price rounded">$2,438,000</span>
-										<h3 class="title">853 S Lucerne Blvd</h3>
-										<p class="location">Los Angeles, CA 90005</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-6 col-lg-4 mb-4">
-							<a href="property-details.html" class="prop-entry d-block">
-								<figure><img src="<?php echo Url::to('@web/images/img_1.jpg'); ?>" alt="Image" class="img-fluid"></figure>
-								<div class="prop-text">
-									<div class="inner">
-										<span class="price rounded">$5,320,000</span>
-										<h3 class="title">853 S Lucerne Blvd</h3>
-										<p class="location">Los Angeles, CA 90005</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-6 col-lg-4 mb-4">
-							<a href="property-details.html" class="prop-entry d-block">
-								<figure><img src="<?php echo Url::to('@web/images/img_1.jpg'); ?>" alt="Image" class="img-fluid"></figure>
-								<div class="prop-text">
-									<div class="inner">
-										<span class="price rounded">$2,350,000</span>
-										<h3 class="title">853 S Lucerne Blvd</h3>
-										<p class="location">Los Angeles, CA 90005</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-6 col-lg-4 mb-4">
-							<a href="property-details.html" class="prop-entry d-block">
-								<figure><img src="<?php echo Url::to('@web/images/img_1.jpg'); ?>" alt="Image" class="img-fluid"></figure>
-								<div class="prop-text">
-									<div class="inner">
-										<span class="price rounded">$1,550,000</span>
-										<h3 class="title">853 S Lucerne Blvd</h3>
-										<p class="location">Los Angeles, CA 90005</p>
-									</div>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-6 col-lg-4 mb-4">
-							<a href="property-details.html" class="prop-entry d-block">
-								<figure><img src="<?php echo Url::to('@web/images/img_1.jpg'); ?>" alt="Image" class="img-fluid"></figure>
-								<div class="prop-text">
-									<div class="inner">
-										<span class="price rounded">$4,291,000</span>
-										<h3 class="title">853 S Lucerne Blvd</h3>
-										<p class="location">Los Angeles, CA 90005</p>
-									</div>
-								</div>
-							</a>
-						</div>
+						<?php } ?>
 					</div>
 				</div>
 			</div>
@@ -279,7 +221,7 @@ $this->title = 'Home — ArsiteKita';
 							<p class="lead text-white-5">hanya dengan memberikan saran dan komentar untuk pengembangan website kami</p>
 						</div>
 						<div class="col-md-4 text-center">
-							<a href="#" class="btn btn-outline-primary btn-block py-3 btn-lg">Lanjutkan Testimoni</a>
+							<a href="/form/testimoni" class="btn btn-outline-primary btn-block py-3 btn-lg">Lanjutkan Testimoni</a>
 						</div>
 					</div>
 				</div>

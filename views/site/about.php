@@ -5,7 +5,7 @@ use yii\helpers\Url;
 $this->title = 'About';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-  <div class="super_container">
+    <div class="super_container">
 			<!-- Header -->
 			<header class="header">
 				<!-- Top Bar -->
@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
 											<li><i class="fa fa-envelope-o" aria-hidden="true"></i><div>info.arsitekita@gmail.com</div></li>
 										</ul>
 										<div class="top_bar_login ml-auto">
-											<div class="login_button"><a href="signup/index.php">Daftar</a></div>
+											<div class="login_button"><a href="/register">Daftar</a></div>
 										</div>
 									</div>
 								</div>
@@ -40,12 +40,11 @@ $this->params['breadcrumbs'][] = $this->title;
 									</div>
 									<nav class="main_nav_contaner ml-auto">
 										<ul class="main_nav">
-											<li class="active"><a href="home.php">Beranda</a></li>
-											<li><a href="about.php">Tentang</a></li>
-											<li><a href="projects.php">Proyek</a></li>
-											<li><a href="developers.php">Pengembang</a></li>
-											<li><a href="ranking.php">Peringkat</a></li>
-											<li><a href="signin/index.php">Masuk</a></li>
+											<li class="active"><a href="/">Beranda</a></li>
+											<li><a href="/about">Tentang</a></li>
+											<li><a href="/projects">Proyek</a></li>
+											<li><a href="/developers">Pengembang</a></li>
+											<li><a href="/login">Masuk</a></li>
 										</ul>
 										<div class="hamburger menu_mm">
 											<i class="fa fa-bars menu_mm" aria-hidden="true"></i>
@@ -63,14 +62,14 @@ $this->params['breadcrumbs'][] = $this->title;
 				<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
 				<nav class="menu_nav">
 					<ul class="menu_mm">
-						<li class="menu_mm"><a href="home.php">Beranda</a></li>
-						<li class="menu_mm"><a href="about.php">Tentang</a></li>
-						<li class="menu_mm"><a href="projects.php">Proyek</a></li>
-						<li class="menu_mm"><a href="developers.php">Pengembang</a></li>
-						<li class="menu_mm"><a href="ranking.php">Peringkat</a></li>
-						<li class="menu_mm"><a href="signin.php">Masuk</a></li>
+						<li class="menu_mm"><a href="/">Beranda</a></li>
+						<li class="menu_mm"><a href="/about">Tentang</a></li>
+						<li class="menu_mm"><a href="/projects">Proyek</a></li>
+						<li class="menu_mm"><a href="/developers">Pengembang</a></li>
+						<li class="menu_mm"><a href="/login">Masuk</a></li>
 					</ul>
 				</nav>
+			</div>
 			</div>
       <!-- About -->
       <div class="about bg-light">
@@ -134,96 +133,19 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <div class="row block-13">
           <div class="nonloop-block-13 owl-carousel">
+            <?php foreach ($testimonies as $testimoni) {
+            ?>
             <div class="slide-item">
               <div class="team-member text-center">
-                <img src="<?php echo Url::to('@web/images/person_1.jpg'); ?>" alt="Image" class="img-fluid mb-4 w-50 rounded-circle mx-auto">
+                <img src="<?php $linkto = '@web/data/' . $testimoni['FOTO'] ;echo Url::to($linkto); ?>" alt="Image" class="img-fluid mb-4 w-50 rounded-circle mx-auto">
                 <div class="text p-3">
-                  <h2 class="mb-2 font-weight-light text-black h4">Megan Smith</h2>
-                  <span class="d-block mb-3 text-white-opacity-05">Guest</span>
-                  <p class="mb-5">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem totam non quis facere blanditiis praesentium est. &rdquo;</p>
+                  <h2 class="mb-2 font-weight-light text-black h4"><?php echo $testimoni['NAMA']; ?></h2>
+                  <span class="d-block mb-3 text-white-opacity-05"><?php echo $testimoni['STATUS']; ?></span>
+                  <p class="mb-5">&ldquo;<?php echo $testimoni['TESTIMONI']; ?> &rdquo;</p>
                 </div>
               </div>
             </div>
-            <div class="slide-item">
-              <div class="team-member text-center">
-                <img src="<?php echo Url::to('@web/images/person_1.jpg'); ?>" alt="Image" class="img-fluid mb-4 w-50 rounded-circle mx-auto">
-                <div class="text p-3">
-                  <h2 class="mb-2 font-weight-light text-black h4">Brooke Cagle</h2>
-                  <span class="d-block mb-3 text-white-opacity-05">Guest</span>
-                  <p class="mb-5">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem totam non quis facere blanditiis praesentium est. &rdquo;</p>
-                </div>
-              </div>
-            </div>
-            <div class="slide-item">
-              <div class="team-member text-center">
-                <img src="<?php echo Url::to('@web/images/person_1.jpg'); ?>" alt="Image" class="img-fluid mb-4 w-50 rounded-circle mx-auto">
-                <div class="text p-3">
-                  <h2 class="mb-2 font-weight-light text-black h4">Philip Martin</h2>
-                  <span class="d-block mb-3 text-white-opacity-05">Guest</span>
-                  <p class="mb-5">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem totam non quis facere blanditiis praesentium est. &rdquo;</p>
-                </div>
-              </div>
-            </div>
-            <div class="slide-item">
-              <div class="team-member text-center">
-                <img src="<?php echo Url::to('@web/images/person_1.jpg'); ?>" alt="Image" class="img-fluid mb-4 w-50 rounded-circle mx-auto">
-                <div class="text p-3">
-                  <h2 class="mb-2 font-weight-light text-black h4">Megan Smith</h2>
-                  <span class="d-block mb-3 text-white-opacity-05">Guest</span>
-                  <p class="mb-5">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem totam non quis facere blanditiis praesentium est. &rdquo;</p>
-                </div>
-              </div>
-            </div>
-            <div class="slide-item">
-              <div class="team-member text-center">
-                <img src="<?php echo Url::to('@web/images/person_1.jpg'); ?>" alt="Image" class="img-fluid mb-4 w-50 rounded-circle mx-auto">
-                <div class="text p-3">
-                  <h2 class="mb-2 font-weight-light text-black h4">Brooke Cagle</h2>
-                  <span class="d-block mb-3 text-white-opacity-05">Guest</span>
-                  <p class="mb-5">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem totam non quis facere blanditiis praesentium est. &rdquo;</p>
-                </div>
-              </div>
-            </div>
-            <div class="slide-item">
-              <div class="team-member text-center">
-                <img src="<?php echo Url::to('@web/images/person_1.jpg'); ?>" alt="Image" class="img-fluid mb-4 w-50 rounded-circle mx-auto">
-                <div class="text p-3">
-                  <h2 class="mb-2 font-weight-light text-black h4">Philip Martin</h2>
-                  <span class="d-block mb-3 text-white-opacity-05">Guest</span>
-                  <p class="mb-5">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem totam non quis facere blanditiis praesentium est. &rdquo;</p>
-                </div>
-              </div>
-            </div>
-            <div class="slide-item">
-              <div class="team-member text-center">
-                <img src="<?php echo Url::to('@web/images/person_1.jpg'); ?>" alt="Image" class="img-fluid mb-4 w-50 rounded-circle mx-auto">
-                <div class="text p-3">
-                  <h2 class="mb-2 font-weight-light text-black h4">Megan Smith</h2>
-                  <span class="d-block mb-3 text-white-opacity-05">Guest</span>
-                  <p class="mb-5">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem totam non quis facere blanditiis praesentium est. &rdquo;</p>
-                </div>
-              </div>
-            </div>
-            <div class="slide-item">
-              <div class="team-member text-center">
-                <img src="<?php echo Url::to('@web/images/person_1.jpg'); ?>" alt="Image" class="img-fluid mb-4 w-50 rounded-circle mx-auto">
-                <div class="text p-3">
-                  <h2 class="mb-2 font-weight-light text-black h4">Brooke Cagle</h2>
-                  <span class="d-block mb-3 text-white-opacity-05">Guest</span>
-                  <p class="mb-5">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem totam non quis facere blanditiis praesentium est. &rdquo;</p>
-                </div>
-              </div>
-            </div>
-            <div class="slide-item">
-              <div class="team-member text-center">
-                <img src="<?php echo Url::to('@web/images/person_1.jpg'); ?>" alt="Image" class="img-fluid mb-4 w-50 rounded-circle mx-auto">
-                <div class="text p-3">
-                  <h2 class="mb-2 font-weight-light text-black h4">Philip Martin</h2>
-                  <span class="d-block mb-3 text-white-opacity-05">Guest</span>
-                  <p class="mb-5">&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem totam non quis facere blanditiis praesentium est. &rdquo;</p>
-                </div>
-              </div>
-            </div>
+            <?php } ?>
           </div>
         </div>
       </div>
@@ -238,7 +160,7 @@ $this->params['breadcrumbs'][] = $this->title;
 							<p class="lead text-white-5">hanya dengan memberikan saran dan komentar untuk pengembangan website kami</p>
 						</div>
 						<div class="col-md-4 text-center">
-							<a href="#" class="btn btn-outline-primary btn-block py-3 btn-lg">Lanjutkan Testimoni</a>
+							<a href="/form/testimoni" class="btn btn-outline-primary btn-block py-3 btn-lg">Lanjutkan Testimoni</a>
 						</div>
 					</div>
 				</div>
